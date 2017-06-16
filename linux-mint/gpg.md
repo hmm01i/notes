@@ -1,13 +1,40 @@
 # Setting up and using gnuPG / GPG
 ## Basic Usage
 ### Packages
-gnupg2
-
+- gnupg2
+- pinentry-curses
 
 ### Useful comands
 ```
-gpg2 --key-gen
+gpg2 --full-gen-key
+gpg2 --key-gen # just prompts for name
 gpg2 --list-keys
+gpg2 --list-secret-keys
+```
+
+### Creating key
+```
+gpg2 --full-gen-key
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection? 4
+
+What keysize do you want? (2048) 4096
+
+Please specify how long the key should be valid.
+Key is valid for? (0) 1m # 1 month
+Is this correct? (y/N) y
+
+Real name: Jacob Sohl
+Email address: jacobsohl@gmail.com
+Comment: 
+You selected this USER-ID:
+    "Jacob Sohl <jacobsohl@gmail.com>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
 ```
 
 ## Smart Card support (eg YubiKey)
@@ -29,6 +56,15 @@ gpg2 --card-edit
 
 ### Common Error messages
 (wip)
+#### No Pinentry
+```
+gpg2 --gen-key
+<snip>
+gpg: agent_genkey failed: No pinentry
+Key generation failed: No pinentry
+```
+*Resolution:* Install pinentry-curses
+
 
 # (WIP: YubiKey)
 ## References
