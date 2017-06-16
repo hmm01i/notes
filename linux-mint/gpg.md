@@ -1,5 +1,6 @@
 # Setting up and using gnuPG / GPG
 ## Basic Usage
+### Packages
 gnupg2
 
 
@@ -20,9 +21,11 @@ gpg2 --list-keys
 - pcscd
 - scdaemon
 
-## Commands
-`gpg2 --card-status`
-`gpg2 --card-edit`
+### Commands
+```
+gpg2 --card-status
+gpg2 --card-edit
+```
 
 ### Common Error messages
 (wip)
