@@ -3,6 +3,7 @@
 ## References
 [System Startup](https://www.freebsd.org/doc/en/articles/linux-users/startup.html)
 [Practical rc.d scripting](https://www.freebsd.org/doc/en/articles/rc-scripting/)
+[FreeNAS jails - Starting installed software](http://doc.freenas.org/9.3/freenas_jails.html#starting-installed-software)
 
 
 ## Example: carbon-cache
