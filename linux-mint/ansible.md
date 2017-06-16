@@ -8,9 +8,9 @@ sudo apt-get install ansible
 ```
 
 ## Setting up hosts file
-```
-vim /etc/ansible/hosts
+`/etc/ansible/hosts`
 
+```
 [freebsd]
 freenas ansible_host=192.168.1.10
 ```
