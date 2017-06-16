@@ -4,24 +4,25 @@ gnupg2
 
 
 ### Useful comands
+```
 gpg2 --key-gen
-
 gpg2 --list-keys
+```
 
 ## Smart Card support (eg YubiKey)
 ### Additional Packages
-pcscd
-
-pcsc-tools
-
-scdaemon
-
-monkeysphere
+- pcscd
+- pcsc-tools
+- scdaemon
+- monkeysphere
 
 ### Services
-pcscd
-scdaemon
+- pcscd
+- scdaemon
 
+## Commands
+`gpg2 --card-status`
+`gpg2 --card-edit`
 
 ### Common Error messages
 (wip)
