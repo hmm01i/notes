@@ -1,10 +1,16 @@
 # Using puppet to manage a Mint Workstation (eg. laptop, desktop)
 
 ## Packages
+Puppet Collection apt repo
+
+`https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb`
+
+Packages
 - puppet-agent
 - librarian-puppet-simple
 
-## Control repo
+## Control git repo
+
 As root
 ```
 mkdir -p /etc/facter/facts.d/
