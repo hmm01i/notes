@@ -23,6 +23,19 @@ watch su -c "echo 2 > /sys/devices/platform/samsung/leds/samsung::kbd_backlight/
 
 Eventually I will turn that into some kinda of service. Unless I find something I've missed. But it could be a good project.
 
+```
+import evdev
+
+backlight_device = '/sys/devices/platform/samsung/leds/samsung::kbd_backlight/brightness'
+keybd = evdev.InputDevice('/dev/input/event3')
+
+for event in keybd.read_loop():
+        if event.type == evdev.ecodes.EV_KEY:
+                with open(backlight_device,'w') as b:
+                        b.write('3')
+```
+
+
 The keys don't work. But they do register in dmesg. Haven't figured out how to utilize thats.
 Not sure which keycodes I should be using.
 ```
@@ -55,3 +68,6 @@ xinput reattach <device> <master>
 xinput also has a `--disable`` option need to research the difference there.
 
 
+sudo lsinput
+sudo input-events
+sudo input-kbd
